@@ -15,20 +15,28 @@ module.exports = {
 	    inline: true,//实时刷新
 		port: 8090,
 	  } ,
+	  resolve: {
+	          alias: {
+	              'vue$': 'vue/dist/vue.esm.js'
+	          },
+	  },
+	  
 	 module: {
 	         rules: [
-	             {
-	                 test: /(\.jsx|\.js)$/,
-	                 use: {
-	                     loader: "babel-loader",
-	                     options: {
-	                         presets: [
-	                             "env", "react"
-	                         ]
-	                     }
-	                 },
-	                 exclude: /node_modules/
-	             }
+	             // {
+	             //     test: /(\.jsx|\.js)$/,
+	             //     use: {
+	             //         loader: "babel-loader",
+	             //         options: {
+	             //             presets: [
+	             //                 "env", "react"
+	             //             ]
+	             //         }
+	             //     },
+	             //     exclude: /node_modules/
+	             // }
 	         ]
 	     }
+		 
+		   
 }
